@@ -95,6 +95,8 @@ tile.enderPlanks.name=Доски края
 #items
 item.resourcenuggetthauminite.name=Кусочек Тауминита
 item.resourcethauminite.thauminite_ingot.name=Слиток Тауминита
+item.resourcethauminite.gear.name=Тауминитовая Шестерня
+item.resourcethauminite.plate.name=Тауминитовая Пластина
 item.resourcethaumium_wand_core.name=Таум-металлический стержень
 item.resourcevoid_wand_core.name=Пустотный стержень
 item.resourceaurelia_petal.name=Лепесток Аурелии
@@ -677,3 +679,7 @@ tc.research_text.TB.ROD_primal_staff=Хранилище энергии синг�
 #Chat notifications
 tb.txt.linkStarted=Связывание начато
 tb.txt.linkEstabilished=Связь установлена
+
+#Golems
+golem.material.thauminite=Тауминит
+golem.material.text.thauminite=Голем сделан из тауминита. Тауминит похож на таум-метал, но он прочнее и легче, так как имеет структуру алмаза.

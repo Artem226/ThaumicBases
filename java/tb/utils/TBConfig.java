@@ -38,6 +38,8 @@ public class TBConfig implements IDummyConfig{
 		enableTTCompathability = cfg.getBoolean("enableTTCompathability", "General", true, "Allow the mod to register it's enchantments in the Thaumic Tinkerer's enchanter? Set to false if Thaumic Tinkerer is crashing you.");
 	
 		allowHSNicknameChange = cfg.getBoolean("allowHerobrinesScytheNicknameChange", "General", true, "Will the Scythe of the white eyed one change the player's nickname to Herobrine while he is holding it.");
+		
+		enableTBGolemMaterials = cfg.getBoolean("enableTBGolemMaterials", "Golems", true, "Does Thaumic Bases add golem materials?");
 	}
 	
 	static Configuration cfg;
@@ -70,4 +72,5 @@ public class TBConfig implements IDummyConfig{
 	
 	public static boolean allowHSNicknameChange;
 
+	public static boolean enableTBGolemMaterials;
 }

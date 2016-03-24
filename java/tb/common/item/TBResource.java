@@ -28,7 +28,9 @@ public class TBResource extends Item implements IOldItem{
 		"aurelia_petal",
 		"briar_seedbag",
 		"tobacco_leaves",
-		"bloodycloth"
+		"bloodycloth",
+		"thauminite/gear",
+		"thauminite/plate"
 	};
 	
 	public static Icon[] icons = new Icon[names.length];

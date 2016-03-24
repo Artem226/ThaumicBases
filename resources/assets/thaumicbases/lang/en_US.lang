@@ -95,6 +95,8 @@ tile.enderPlanks.name=Ender Wood Planks
 #items
 item.resourcenuggetthauminite.name=Thauminite Nugget
 item.resourcethauminite.thauminite_ingot.name=Thauminite Ingot
+item.resourcethauminite.gear.name=Thauminite Gear
+item.resourcethauminite.plate.name=Thauminite Plate
 item.resourcethaumium_wand_core.name=Thaumium Wand Core
 item.resourcevoid_wand_core.name=Void Wand Core
 item.resourceaurelia_petal.name=Aurelia Petal
@@ -759,3 +761,7 @@ tc.research_name.TB.METALLURGY=Magical Metallurgy
 tc.research_text.TB.METALLURGY=Where metals meet magic
 tc.research_name.TB.ARCANEEAR=Arcane Ear
 tc.research_text.TB.ARCANEEAR=Shhh, do you hear something?
+
+#Golems
+golem.material.thauminite=Thauminite
+golem.material.text.thauminite=This golem is crafted from thauminite. It shares many characteristics with thaumium, but has a diamond structure. It is sturdier and more resistant to damage, but lighter.

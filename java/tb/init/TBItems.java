@@ -1,5 +1,7 @@
 package tb.init;
 
+import java.awt.Color;
+
 import DummyCore.Items.ItemRegistry;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -34,6 +36,9 @@ import tb.common.item.ItemVoidShears;
 import tb.common.item.TBResource;
 import tb.common.item.TBTobacco;
 import tb.core.TBCore;
+import tb.utils.TBConfig;
+import thaumcraft.api.golems.EnumGolemTrait;
+import thaumcraft.api.golems.parts.GolemMaterial;
 import thaumcraft.api.wands.WandCap;
 import thaumcraft.api.wands.WandRod;
 import thaumcraft.common.items.wands.WandRodPrimalOnUpdate;
@@ -98,8 +103,14 @@ public class TBItems {
 		WAND_CAP_THAUMINITE = new WandCap("thauminite",0.85F,1,new ItemStack(resource,1,2),6,new ResourceLocation("thaumicbases","items/thauminite/wand_cap_thauminite_uv"));	
 		WAND_ROD_THAUMIUM = new WandRod("tbthaumium", 450, new ItemStack(resource,1,3), 6, new WandRodPrimalOnUpdate(), new ResourceLocation("thaumicbases","items/wand_rod_thaumium_uv"));
 		WAND_ROD_VOID = new WandRod("tbvoid", 750, new ItemStack(resource,1,4), 16, new WandRodPrimalOnUpdate(), new ResourceLocation("thaumicbases","items/wand_rod_void_uv"));
-
+		
+		if(TBConfig.enableTBGolemMaterials)
+		{
+			GolemMaterial.register(thauminiteGolemMaterial);
+		}
+		
 	}
+
 	
 	public static ToolMaterial thauminite = EnumHelper.addToolMaterial("THAUMINITE", 3, 974, 7F, 2.8F, 15);
 	public static ArmorMaterial thauminiteA = EnumHelper.addArmorMaterial("ATHAUMINITE", "thaumicbases:textures/items/armor/thauminite/thauminite", 27, new int[]{3, 8, 6, 3}, 17);
@@ -159,6 +170,9 @@ public class TBItems {
 	
 	public static WandRod WAND_ROD_THAUMIUM;
 	public static WandRod WAND_ROD_VOID;
+	
+	
+	public static GolemMaterial thauminiteGolemMaterial = new GolemMaterial("THAUMINITE", new String[]{"TB.Thauminite"}, new ResourceLocation("thaumicbases","textures/entity/golem/mat_thauminite.png"), new Color(75,101,220).getRGB(), 26, 12, 5, new ItemStack(resource,1,10), new ItemStack(resource,1,9), new EnumGolemTrait[]{EnumGolemTrait.BLASTPROOF, EnumGolemTrait.FIREPROOF, EnumGolemTrait.LIGHT});
 	
 	
 	public static final Class<TBCore> core = TBCore.class;

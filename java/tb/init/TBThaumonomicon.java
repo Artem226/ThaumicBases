@@ -9,6 +9,7 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import tb.api.RevolverUpgrade;
@@ -217,7 +218,9 @@ public class TBThaumonomicon {
 			'#',tiG
 		});
 		
+		ShapedOreRecipe thauminiteGP[] = new ShapedOreRecipe[]{new ShapedOreRecipe(new ItemStack(TBItems.resource, 3, 10), new Object[] { "TTT", Character.valueOf('T'), new ItemStack(TBItems.resource,1,1) }), new ShapedOreRecipe(new ItemStack(TBItems.resource, 1, 9), new Object[] { "BBB", "BIB", "BBB", Character.valueOf('I'), "ingotIron", Character.valueOf('B'), new ItemStack(TBItems.resource,1,0) })};
 
+		
 		ShapedArcaneRecipe thauminiteCaps = new ShapedArcaneRecipe("CAP_thauminite", new ItemStack(TBItems.resource,1,2), primals(25), new Object[]{
 			"###",
 			"#@#",
@@ -1159,6 +1162,7 @@ public class TBThaumonomicon {
 			new ResearchPage(TBRecipes.recipes.get("thauminiteIngot")),
 			new ResearchPage(TBRecipes.recipes.get("thauminiteNugget")),
 			new ResearchPage(TBRecipes.recipes.get("thauminiteBlock")),
+			new ResearchPage(thauminiteGP),
 			new ResearchPage(toolsRec)
 			).registerResearchItem();
 		
@@ -2291,6 +2295,9 @@ public class TBThaumonomicon {
 		
 		CraftingManager.getInstance().getRecipeList().add(voidShearsRec);
 		CraftingManager.getInstance().getRecipeList().add(voidFlint);
+		
+		GameRegistry.addRecipe(thauminiteGP[0]);
+		GameRegistry.addRecipe(thauminiteGP[1]);
 		
 		add(revolverRec);
 		add(accuracyRec);
